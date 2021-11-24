@@ -6,14 +6,14 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>It's a Mood</title>
+        <title>It&apos;s a Mood</title>
         <meta name="description" content="Daily mood tracking" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <span>It's a Mood</span>
+          Welcome to <span>It&apos;s a <strong>Mood</strong></span>
         </h1>
       </main>
     </div>
