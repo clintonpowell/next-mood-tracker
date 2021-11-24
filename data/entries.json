@@ -1,0 +1,17 @@
+{
+    "currentIndex": 1,
+    "data": [
+        {
+            "id": 0,
+            "content": "Ran out of coffee",
+            "mood": 0,
+            "date": "2021-10-24T16:41:36.461Z"
+        },
+        {
+            "id": 1,
+            "content": "Found a $100 bill in my pocket",
+            "mood": 3,
+            "date": "2021-11-24T16:42:41.922Z"
+        }
+    ]
+}
