@@ -1,6 +1,6 @@
 {
-    "HORRIBLE": 0,
-    "OKAY": 1,
-    "GOOD": 2,
-    "AMAZING": 3
+    "Horrible": 0,
+    "Okay": 1,
+    "Good": 2,
+    "Amazing": 3
 }
