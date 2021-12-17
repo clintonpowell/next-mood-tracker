@@ -1,0 +1,21 @@
+.moods li {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  list-style: none;
+  margin-left: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.moods {
+  flex-wrap: wrap;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}

@@ -1,6 +1,22 @@
-{
-    "Horrible": 0,
-    "Okay": 1,
-    "Good": 2,
-    "Amazing": 3
-}
+[
+    {
+        "id": 0,
+        "color": "#DA5D5D",
+        "name": "Horrible"
+    },
+    {
+        "id": 1,
+        "color": "#FFFA99",
+        "name": "Okay"
+    },
+    {
+        "id": 2,
+        "color": "#C8EFD4",
+        "name": "Good"
+    },
+    {
+        "id": 3,
+        "color": "#01D963",
+        "name": "Amazing"
+    }
+]

@@ -1,34 +1,35 @@
-import CurrentMood from 'components/CurrentMood'
-import NewMood from 'components/NewMood'
-import { getEntries, getMoods } from 'data/dataHandlers'
 import Head from 'next/head'
-import { useState } from 'react'
-import styles from '../styles/Moods.module.css'
+import { getMoods } from 'data/dataHandlers';
+import styles from '../styles/MoodsList.module.css';
+import home from '../styles/Home.module.css';
 
-export default function Moods({ entries, moods }) {
+export default function Home({ moods }) {
   return (
-    <div className={styles.container}>
+    <div className={home.container}>
       <Head>
-        <title>It&apos;s a Mood - enter your mood</title>
+        <title>It&apos;s a Mood - Available Moods</title>
         <meta name="description" content="Daily mood tracking" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <CurrentMood entries={entries} moods={moods} />
-        <NewMood moods={moods} entries={entries} />
+      <main className={home.main}>
+        <h2>Available Moods</h2>
+        <ul className={styles.moods}>
+          {moods.map(m => {
+            return <li key={m.name} style={{backgroundColor: m.color}}>{m.name}</li>
+          })}
+        </ul>
       </main>
     </div>
   )
 }
 
-export async function getServerSideProps(context) {
-  const entries = await getEntries();
+
+export async function getStaticProps(context) {
   const moods = await getMoods();
 
   return {
     props: {
-      entries,
       moods
     }
   };

@@ -6,7 +6,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
   --main-color: #0070f3;
-  --main-color-light: #7dace0;
+  --main-color-light: #5396e4;
   --accent-color: #c680ff;
 }
 
@@ -17,4 +17,23 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.btn {
+  margin: 10px;
+  border: 2px solid var(--main-color);
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  min-width: 100px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: var(--main-color-light);
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.btn:hover {
+  background-color: var(--main-color);
+  color: #ffffff;
 }

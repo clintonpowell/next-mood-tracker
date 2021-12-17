@@ -1,17 +1,1 @@
-{
-    "currentIndex": 1,
-    "data": [
-        {
-            "id": 0,
-            "content": "Ran out of coffee",
-            "mood": 0,
-            "date": "2021-10-24T16:41:36.461Z"
-        },
-        {
-            "id": 1,
-            "content": "Found a $100 bill in my pocket",
-            "mood": 3,
-            "date": "2021-11-24T16:42:41.922Z"
-        }
-    ]
-}
+{"currentIndex":6,"data":[{"mood":3,"content":"Just made some coffee!","id":1,"date":"2021-12-17T17:44:18.552Z"},{"mood":0,"content":"I stepped on a Lego.","id":2,"date":"2021-12-17T20:31:23.671Z"},{"mood":1,"content":"It's the weekend, but I'm still thinking about my work.","id":3,"date":"2021-12-17T20:31:37.699Z"},{"mood":3,"content":"Found a $20 bill in my shoe.","id":4,"date":"2021-12-17T20:46:45.731Z"},{"mood":2,"content":"Got a good cup of coffee in hand. Waiting on the grocery store to open because I forgot how early it was.","id":5,"date":"2021-12-17T20:50:23.183Z"},{"mood":1,"content":"Forgot my coffee, but found a nice bar of dark chocolate to tide me over.","id":6,"date":"2021-12-17T20:55:53.064Z"}]}

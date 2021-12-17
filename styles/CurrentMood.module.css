@@ -1,0 +1,9 @@
+.entry {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.entry p {
+  margin: 10px;
+  max-width: 400px;
+}

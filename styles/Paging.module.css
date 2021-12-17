@@ -1,0 +1,30 @@
+
+.pages.hidden {
+  display: none;
+}
+
+.pages {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+}
+
+.disabled {
+  background-color: #d0d0d0 !important;
+  color: #000000 !important;
+}
+
+.next, .prev {
+  min-width: 50px;
+  cursor: pointer;
+  margin: 10px;
+  background-color: var(--main-color-light);
+}
+
+.next:hover, .prev:hover {
+  background-color: var(--main-color);
+  color: #ffffff;
+}

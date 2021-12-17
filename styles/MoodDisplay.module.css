@@ -1,0 +1,26 @@
+.mood {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  margin: 10px;
+  border: 1px solid gray;
+  position: relative;  
+}
+
+.button.selected {
+  box-shadow: 0px 0px 4px var(--accent-color);
+  border-width: 2px;
+  border-color: #000000;
+}
+
+.button input {
+  height: 0;
+  width: 0;
+  position: absolute;
+  transform: translateX(-1000px);
+}
+
+.button:hover {
+  border-color: #000000;
+  opacity: 0.9;
+}

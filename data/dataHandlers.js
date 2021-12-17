@@ -2,30 +2,42 @@ import fs from 'fs';
 import path from 'path';
 
 const getPath = (fileName) => path.join(process.cwd(),'data/', fileName);
-function getData(fileName, delay) {
+function getData(fileName) {
     return new Promise((res, rej) => {
         const data = JSON.parse(fs.readFileSync(getPath(fileName)));
-        if(!delay) {
-            return res(data);
-        }
-        
-        setTimeout(() => {
-            res(data)
-        }, 10 + Math.random()*20);
+        return res(data);
     });
 }
 
-export function getEntries(ops = {delay: true}) {
-    return getData('entries.json', ops.delay).then(d => d.data);
+export function getEntries(page=0, size=-1, sort='asc') {
+    return getData('entries.json').then(d => d.data).then(d => {
+        const latest = d[d.length-1] || null;
+        if(sort === 'desc') {
+            d.reverse()
+        }
+        if(size > 0) {
+            return {
+                latest,
+                entries: d.slice(page*size, page*size + size),
+                pageCount: Math.ceil(d.length / size)
+            };
+        }
+
+        return {
+            latest,
+            entries: d,
+            pageCount: 1
+        };
+    });
 }
 
-export function getMoods(ops = {delay: true}) {
-    return getData('moods.json', ops.delay);
+export function getMoods() {
+    return getData('moods.json');
 }
 
-export function getEntryById(id, ops = {delay: true}) {
+export function getEntryById(id) {
     return new Promise((res, rej) => {
-        getData('entries.json', ops.delay).then(response => {
+        getData('entries.json').then(response => {
             const entry = response.data.find(e => e.id === id);
             if(entry) {
                 return res(entry);
